@@ -1,4 +1,4 @@
-[Main](https://github.com/Causemo/api-doc/blob/master/readme.md) / Authentication
+[Main](https://github.com/Causemo/api-doc/blob/master/README.md) / Authentication
 ====================
 Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all requests to the API servers are valid. Requests to the API servers need to contain a valid oauth token, otherwise it will be rejected. 
 
