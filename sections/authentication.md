@@ -22,9 +22,10 @@ At Causemo, we implemented various grant types to ensure we support multiple use
 		- Failure Query Params:
 			- `error`: The reason for failure (ie: access_denied)
   - **Try it**:
-	  - ```http://dev-api.causemo.com/auth/authorize?grant_type=token&client=causeMoWww1&redirect_uri=http://causemo.com```
+	  - http://dev-api.causemo.com/auth/authorize?grant_type=token&client=causeMoWww1&redirect_uri=http://causemo.com
 	  - The causemo login page will appear enter a user name and password
-	  - After login it will redirect you to: ```http://www.causemo.com/?token=dbc63cd9ace3f05588705350b28e8a7ede7f5c8ac51b4a8094fe19c441702a20235399fa45464de79a1a4eaa66fb97d61291fe7ced1667&token_type=bearer&expires_in=172799990```
+	  - After login it will redirect you to:
+	  - http://www.causemo.com/?token=dbc63cd9ace3f05588705350b28e8a7ede7f5c8ac51b4a8094fe19c441702a20235399fa45464de79a1a4eaa66fb97d61291fe7ced1667&token_type=bearer&expires_in=172799990
 
 ### Password
   This grant is used by 'privileged' clients because they are able to keep a secret and not expose it to users. With this grant type, clients are able to login using their own login page and send a request to causemo to validate the user credentials on their behalf. Causemo will then receive the request and respond back accordingly with a JSON object. An example on when you would use this is from server-to-server communication. For example, a website with a server backend can send the login request to Causemo from its server. This client is considered to be able to keep a secret because it can keep its secret key on its server and not expose it to end-users.
