@@ -54,4 +54,29 @@ Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all req
     ```javascript
     {"token":"fbd12f796b9997a02638eeca509e642868860dc9fad9ee9e3e5420d2b30be2b67f7a306562e92ca5766bb02acfe964659001f949d0f276","expiresIn":172799993,"tokenType":"bearer"}
     ```
+### Client Credential
+  This grant type is very similar to 'password' type, except is is user agnostic and does not require user authentication. This grant is used by 'privileged' clients because they are able to keep a secret and not expose it to users. With this grant type, clients are able to interact with the causemo platform without a logged in user but as a trusted system. This allows other systems to do various actions on the causemo platform even if the user has not logged in. This is useful when the client does not ask for user credentials. An example on when you would use this is from SDK. SDK does not ask the user to login, however, it will be pushing various actions to causemo. This flow allows causemo to trust the request is coming from the SDK client. However, we still need to look into extra measures on how to keep the secret key private as it is installed on user mobile devices. 
+  - **Endpoint**: [POST] `/auth/token`
+    - Required Query Params:
+      - `grant_type`: `client_credentials`
+    - Required Header:
+      - `Authorization: 'Basic xxxxxxxxxx'`, where 'xxxxxxxxxx' is the base64 encoded client public/secret key (Basic auth).
+    - Response: A JSON object with the following properties:
+      - Success:
+        - `token`: The oauth token granted
+        - `token_type`: `bearer`
+        - `expires_in`: milliseconds until when the token expires. 
+      - Failure:
+        - `status`: status code
+        - `message`: A friendly user message
+  - **Try it**:
+    - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. 
+    ```
+    curl -X POST -H "api-version: 1" -H "Authorization: Basic <VALUE_FROM_ABOVE>" -i --data "" "http://dev-api.causemo.com/auth/token?grant_type=client_credentials"
+    ```
+    - Replace `<VALUE_FROM_ABOVE>` with base64 value
+    - Repsonse will look as such: 
+    ```javascript
+    {"token":"fbd12f796b9997a02638eeca509e642868860dc9fad9ee9e3e5420d2b30be2b67f7a306562e92ca5766bb02acfe964659001f949d0f276","expiresIn":172799993,"tokenType":"bearer"}
+    ```
 
