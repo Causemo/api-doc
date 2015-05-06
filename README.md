@@ -9,4 +9,4 @@ Every API request requires an authentication token in the header. This ensures t
 API
 --------------
 Causemo API is divided into multiple parts.
-- [SDK API Guide](https://github.com/Causemo/api-doc/blob/master/sections/api/sdk/README.md) 
+- [SDK API Guide](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/README.md) 
