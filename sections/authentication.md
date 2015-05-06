@@ -3,6 +3,7 @@ Authentication
 Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all requests to the API servers are valid. Requests to the API servers need to contain a valid oauth token, otherwise it will be rejected. 
 
 ## Grant Types
+At Causemo, we implemented various grant types to ensure we support multiple use cases.
 
 ### Token
   This grant type is used for clients that are not 'privileged' because they are not able to keep a secret or are third party platforms using our system as a login provider. This grant type will pop up a login page on causemo.com and do all the authentication on causemo servers, then redirect back to the client requesting token after user logs in. For example, you would use this is if you are a static web page. Since the end users can see and inspect the javascript code, a static web page cannot keep a secret. Thus it must use a token grant type.
