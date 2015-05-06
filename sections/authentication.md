@@ -54,6 +54,7 @@ Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all req
     ```javascript
     {"token":"fbd12f796b9997a02638eeca509e642868860dc9fad9ee9e3e5420d2b30be2b67f7a306562e92ca5766bb02acfe964659001f949d0f276","expiresIn":172799993,"tokenType":"bearer"}
     ```
+    
 ### Client Credential
   This grant type is very similar to 'password' type, except is is user agnostic and does not require user authentication. This grant is used by 'privileged' clients because they are able to keep a secret and not expose it to users. With this grant type, clients are able to interact with the causemo platform without a logged in user but as a trusted system. This allows other systems to do various actions on the causemo platform even if the user has not logged in. This is useful when the client does not ask for user credentials. An example on when you would use this is from SDK. SDK does not ask the user to login, however, it will be pushing various actions to causemo. This flow allows causemo to trust the request is coming from the SDK client. However, we still need to look into extra measures on how to keep the secret key private as it is installed on user mobile devices. 
   - **Endpoint**: [POST] `/auth/token`
