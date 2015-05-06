@@ -44,14 +44,14 @@ Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all req
         - `message`: A friendly user message
   - **Try it**:
     - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. 
-```
-curl -X POST -H "api-version: 1" -H "Authorization: Basic <VALUE_FROM_ABOVE>" -i --data "" "http://dev-api.causemo.com/auth/token?grant_type=password&username=<USER>&password=<PASSWORD>"
-```
-- Replace `<VALUE_FROM_ABOVE>` with base64 value
-- Replace `<USER>` with user name
-- Replace `<PASSWORD>` with user password
-- Repsonse will look as such: 
-```javascript
-{"token":"fbd12f796b9997a02638eeca509e642868860dc9fad9ee9e3e5420d2b30be2b67f7a306562e92ca5766bb02acfe964659001f949d0f276","expiresIn":172799993,"tokenType":"bearer"}
-```
+    ```
+    curl -X POST -H "api-version: 1" -H "Authorization: Basic <VALUE_FROM_ABOVE>" -i --data "" "http://dev-api.causemo.com/auth/token?grant_type=password&username=<USER>&password=<PASSWORD>"
+    ```
+    - Replace `<VALUE_FROM_ABOVE>` with base64 value
+    - Replace `<USER>` with user name
+    - Replace `<PASSWORD>` with user password
+    - Repsonse will look as such: 
+    ```javascript
+    {"token":"fbd12f796b9997a02638eeca509e642868860dc9fad9ee9e3e5420d2b30be2b67f7a306562e92ca5766bb02acfe964659001f949d0f276","expiresIn":172799993,"tokenType":"bearer"}
+    ```
 
