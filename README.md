@@ -4,7 +4,5 @@ TODO
 
 Authentication
 --------------
-TODO
-
-Read the [authentication guide](https://github.com/Causemo/api-doc/blob/master/sections/authentication.md) to get started.
+Every API request requires an authentication token in the header. This ensures the request is coming from a trusted source. How do you integrate with Causemo authentication service, read the [authentication guide](https://github.com/Causemo/api-doc/blob/master/sections/authentication.md) to get started.
 
