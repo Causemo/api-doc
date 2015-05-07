@@ -15,7 +15,7 @@
         - `model`: The device name
     - Params
       - _none_ 
-    - **Try it**:
+    - Try it:
     
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"app": {"appStoreId":"test-publisher-1-app"}, "device": {"udid": "1234556", "platform": "iPhone OS 8.0.2", "model":"iPhone7,2"}}' "http://dev-api.causemo.com/sdk/devices/"
