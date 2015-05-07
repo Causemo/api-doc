@@ -1,6 +1,6 @@
 [Main](https://github.com/Causemo/api-doc/blob/master/README.md) / [SDK API](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/README.md) / Devices
 ====================
-- `sdk/devices/` 
+- **`sdk/devices/`**
   - **[POST]**
     - Initializes a device with Causemo server. 
     - Header fields
