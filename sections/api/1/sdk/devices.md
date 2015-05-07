@@ -17,7 +17,7 @@
       - _none_ 
     - Response
 ```json
-      {
+{
     "app": {
         "id": 1241588087,
         "appStoreId": "test-publisher-1-app",
