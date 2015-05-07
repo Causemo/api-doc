@@ -3,7 +3,7 @@
 
 ###  sdk/devices/
   - **[POST]**
-    - Initializes a device with Causemo server. 
+    - Initializes a device session with Causemo API server. Every new device session should result into a call to this API endpoint.
     - Header fields
       - `api-version: 1`
       - `Authorization: Bearer <AUTH_TOKEN>`
@@ -16,6 +16,9 @@
         - `model`: The device name
     - Params
       - _none_ 
+    - Response
+      - A JSON object representing the `app`, containing its `appProduct` and its `trigger`. It will also return a `transactionId` needed for subsequent API calls for this session.
+      - The `transactionId` should be held for the duration of the SDK session
     - Try it:
       - Replace `<AUTH_TOKEN>` with authenticated token provided
       ```
