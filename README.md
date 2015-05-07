@@ -10,3 +10,5 @@ API
 --------------
 Causemo API is divided into multiple parts.
 - [SDK API Guide](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/README.md) 
+- [Web API Guide](https://github.com/Causemo/api-doc/blob/master/sections/api/1/web/README.md) 
+- [App API Guide](https://github.com/Causemo/api-doc/blob/master/sections/api/1/app/README.md) 
