@@ -32,28 +32,6 @@
         "clientId": 2,
         "AppProducts": [
             {
-                "id": 1241588087,
-                "name": "test-publisher-1-product-1",
-                "description": null,
-                "portionOfProceeds": "0",
-                "donationPrice": "0",
-                "donationPriceTier": 0,
-                "donationRewardUnits": 0,
-                "donationRewardType": null,
-                "donationRewardUri": null,
-                "donationRewardCopy": null,
-                "autoRewardUnits": 0,
-                "autoRewardType": null,
-                "actionButtonCopy": null,
-                "headerCopy": null,
-                "subHeaderCopy": null,
-                "createdAt": "2015-05-06T02:11:48.122Z",
-                "updatedAt": "2015-05-06T02:11:48.122Z",
-                "deletedAt": null,
-                "appId": 1241588087,
-                "Triggers": []
-            },
-            {
                 "id": 1500453386,
                 "name": "test-publisher-1-product-2",
                 "description": null,
