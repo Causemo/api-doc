@@ -6,6 +6,7 @@
     - Initializes a device session with Causemo API server. Every new device session should result into a call to this API endpoint.
     - Header fields
       - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
       - `Authorization: Bearer <AUTH_TOKEN>`
     - Body
       - `app`
