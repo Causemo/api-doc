@@ -6,6 +6,7 @@ All API endpoints for SDK.
 
 - Client Scope
   - `sdk`
+- [Session Initialization](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices) 
 - API 
   - [Devices](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md)
   - [Creatives](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/creatives.md)
