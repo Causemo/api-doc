@@ -3,7 +3,9 @@
 Causemo utilizes [oauth2](https://tools.ietf.org/html/rfc6749) to ensure all requests to the API servers are valid. Requests to the API servers need to contain a valid oauth token, otherwise it will be rejected. 
 
 ## Clients
-Applications accessing/using Causemo API are consided 'clients' since they are consuming the provided API. Each client has a public and private key. The private key should **always** remain private. A client also has a provided `scope` which limits a client access to a particular area in the Causemo API.
+Applications accessing/using Causemo API are consided 'clients' since they are consuming the provided API. Each client has a public and private key. The private key should **always** remain private. If a key is comparamised, Causemo is able to disable access to the APIs for that particular key and generate another for the comprimised client. 
+
+A client also has a provided `scope` which limits a client access to a particular area in the Causemo API.
   - Scope
     - `sdk`: Clients are limited to [SDK API](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/README.md) 
     - `web`: Clients are limited to [Web API](https://github.com/Causemo/api-doc/blob/master/sections/api/1/web/README.md) 
