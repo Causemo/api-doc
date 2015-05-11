@@ -10,4 +10,5 @@ All API endpoints for SDK.
 - API 
   - [Devices](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md)
   - [Creatives](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/creatives.md)
+  - [Campaigns](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/campaigns.md)
 
