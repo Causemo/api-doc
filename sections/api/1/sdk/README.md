@@ -8,7 +8,7 @@ All API endpoints for SDK.
   - `sdk`
 - [Session Initialization](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices) 
 - API 
-  - [Devices](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md)
-  - [Creatives](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/creatives.md)
-  - [Campaigns](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/campaigns.md)
+  - [Devices](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md) Contains all actions and endpoints for a device; primarily used for session initialization. 
+  - [Creatives](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/creatives.md) Contains all actions and endpoints for a creative.
+  - [Campaigns](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/campaigns.md) Contains all actions and endpoints for a campaign, this also includes donations since a donation is made for a campaign. 
 
