@@ -18,8 +18,8 @@
     - Params
       - _none_ 
     - Response
-      - A JSON object representing the `app`, containing its `appProduct` and its `trigger`. It will also return a `transactionId` needed for subsequent API calls for this session.
-      - The `transactionId` should be held for the duration of the SDK session
+      - A JSON object representing the `app`, containing its `appProduct` and its `trigger`. It will also return a `sessionId` needed for subsequent API calls for this session.
+      - The `sessionId` should be held for the duration of the SDK session
     - Try it:
       - Replace `<AUTH_TOKEN>` with authenticated token provided
       ```
