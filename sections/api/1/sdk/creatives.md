@@ -45,3 +45,95 @@
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/started"
       ```
+
+###  sdk/creatives/:creativeId/suspended
+  - **[POST]**
+    - Notifies Causemo a creative was suspended
+    - Header fields
+      - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - `sessionId`: The current session `sessionId`
+      - `udid`: The device `udid` used to initialize session with
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
+      - Replace `<UDID>` with device `udid`
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/suspended"
+      ```
+
+###  sdk/creatives/:creativeId/resumed
+  - **[POST]**
+    - Notifies Causemo a creative was resumed
+    - Header fields
+      - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - `sessionId`: The current session `sessionId`
+      - `udid`: The device `udid` used to initialize session with
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
+      - Replace `<UDID>` with device `udid`
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/resumed"
+      ```
+
+###  sdk/creatives/:creativeId/completed
+  - **[POST]**
+    - Notifies Causemo a creative was completed
+    - Header fields
+      - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - `sessionId`: The current session `sessionId`
+      - `udid`: The device `udid` used to initialize session with
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
+      - Replace `<UDID>` with device `udid`
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/completed"
+      ```
+
+###  sdk/creatives/:creativeId/activated
+  - **[POST]**
+    - Notifies Causemo a creative was activated
+    - Header fields
+      - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - `sessionId`: The current session `sessionId`
+      - `udid`: The device `udid` used to initialize session with
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
+      - Replace `<UDID>` with device `udid`
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/activated"
+      ```
