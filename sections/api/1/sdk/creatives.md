@@ -20,7 +20,7 @@
       - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
       - Replace `<UDID>` with device `udid`
       ```
-      curl -X GET -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" "http://localhost:3000/sdk/creatives?transactionId=<SESSION_ID>&udid=<UDID>"
+      curl -X GET -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" "http://dev-api.causemo.com/sdk/creatives?sessionId=<SESSION_ID>&udid=<UDID>"
       ```
 
 ###  sdk/creatives/:creativeId/started
