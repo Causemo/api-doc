@@ -31,7 +31,7 @@ At Causemo, we implemented various grant types to ensure we support multiple use
 		- Failure Query Params:
 			- `error`: The reason for failure (ie: access_denied)
   - **Try it**:
-	  - http://dev-api.causemo.com/auth/authorize?grant_type=token&client=causeMoWww1&redirect_uri=http://causemo.com
+	  - http://dev-api.causemo.com/auth/authorize?grant_type=token&client=publisher1&redirect_uri=http://causemo.com
 	  - The causemo login page will appear enter a user name and password
 	  - After login it will redirect you to:
 	  - http://www.causemo.com/?token=dbc63cd9ace3f05588705350b28e8a7ede7f5c8ac51b4a8094fe19c441702a20235399fa45464de79a1a4eaa66fb97d61291fe7ced1667&token_type=bearer&expires_in=172799990
