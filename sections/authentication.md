@@ -54,7 +54,7 @@ At Causemo, we implemented various grant types to ensure we support multiple use
         - `status`: status code
         - `message`: A friendly user message
   - **Try it**:
-    - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. 
+    - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. [Here is an online encoder](https://www.base64decode.org/)
     ```
     curl -X POST -H "api-version: 1" -H "Authorization: Basic <VALUE_FROM_ABOVE>" -i --data "" "http://dev-api.causemo.com/auth/token?grant_type=password&username=<USER>&password=<PASSWORD>"
     ```
@@ -82,7 +82,7 @@ At Causemo, we implemented various grant types to ensure we support multiple use
         - `status`: status code
         - `message`: A friendly user message
   - **Try it**:
-    - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. 
+    - Base64 encode your client public key and secret key as such `PUBLIC_KEY:SECRET_KEY`. [Here is an online encoder](https://www.base64decode.org/)
     ```
     curl -X POST -H "api-version: 1" -H "Authorization: Basic <VALUE_FROM_ABOVE>" -i --data "" "http://dev-api.causemo.com/auth/token?grant_type=client_credentials"
     ```
