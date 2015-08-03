@@ -17,9 +17,11 @@
       - A JSON object representing the `creative`, `campaign` and `sessionId`.
     - Try it:
       - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Non-mobile:
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"device":{"platform": "Windows 10", "browser": "chrome"}}' "http://localhost:3000/web/creatives?mobile=false"
       ```
+      - Native mobile
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer c8c08dd5bd62b36427c86f6ecb350a1c7da6a8b115fc8cbe357a6f8324c4a52850ed77d9c30b8440b462cbef2a8967ff97e9e43da2a3d7" -d '{"udid": "12379","device":{"platform": "iPhone OS 8.0.2"}}' "http://localhost:3000/web/creatives"
       ```
