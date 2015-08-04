@@ -197,7 +197,7 @@
 
 ###  web/creatives/:creativeId/donation
   - **[POST]**
-    - Notifies Causemo user was donation screen was completed
+    - Notifies Causemo a user was donation screen was completed. This requires an appStoreId, if you do not have an appStoreId, you should call `web/creatives/:creativeId/donation/submit`.
     - Header fields
       - `api-version: 1`
       - `Authorization: Bearer <AUTH_TOKEN>`
@@ -214,6 +214,31 @@
       - Replace `<APP_PRODUCT_ID>` with a valid `AppProduct.id`
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "appProductId": "<APP_PRODUCT_ID>"}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/donation"
+      ```
+	  
+###  web/creatives/:creativeId/donation/submit
+  - **[POST]**
+    - Notifies Causemo user donation without an appStoreId
+    - Header fields
+      - `api-version: 1`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - `sessionId`: The current session id
+      - `amount`: The amount the user pledged
+      - `email`: (optional) The user email address
+	  - `sourceApp`: (optional) String of the app which request is coming from
+	  - `device`: (optional) JSON object representing a device associated with this request 
+      - `user`: (optional) JSON object representing a user associated with this request 
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<SESSION_ID>` with session
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `web/creatives`
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>","email":"miguel-test3@a.com", "amount": "5.15", "source": "Candy Crush", "user": {"firstName":"miguel", "lastName":"Doe"}}' "http://localhost:3000/web/creatives/<CREATIVE_ID>/donation/submit"
       ```
 
 ###  web/creatives/:creativeId/donation/exited
@@ -247,6 +272,7 @@
       - `amount`: The amount the user pledged
 	  - `device`: (optional) JSON object representing a device associated with this request 
       - `user`: (optional) JSON object representing a user associated with this request 
+      - `sessionId`: The current session id
     - Params
       - _none_ 
     - Response
