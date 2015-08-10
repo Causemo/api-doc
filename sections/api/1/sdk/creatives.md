@@ -56,6 +56,7 @@
     - Body
       - `sessionId`: The current session `sessionId`
       - `udid`: The device `udid` used to initialize session with
+      - `playbackPosition`: The position playback was suspended at in seconds
     - Params
       - _none_ 
     - Response
@@ -66,7 +67,7 @@
       - Replace `<UDID>` with device `udid`
       - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
       ```
-      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/suspended"
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>", "playbackPosition": 12}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/suspended"
       ```
 
 ###  sdk/creatives/:creativeId/resumed
