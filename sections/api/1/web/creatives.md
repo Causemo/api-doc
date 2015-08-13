@@ -121,25 +121,6 @@
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>"}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/activated"
       ```
 
-###  web/creatives/:creativeId/donation/direct
-  - **[POST]**
-    - Notifies Causemo user was directed to donation screen
-    - Header fields
-      - `api-version: 1`
-      - `Authorization: Bearer <AUTH_TOKEN>`
-    - Body
-      - `sessionId`: The current session `sessionId`
-    - Params
-      - _none_ 
-    - Response
-      - A JSON object with `sessionId` and `creativeId`.
-    - Try it:
-      - Replace `<AUTH_TOKEN>` with authenticated token provided
-      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `web/creatives`
-      ```
-      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>"}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/donation/direct"
-      ```
-
 ###  web/creatives/:creativeId/donation/viewed
   - **[POST]**
     - Notifies Causemo user was donation screen was viewed
@@ -157,25 +138,6 @@
       - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `web/creatives`
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>"}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/donation/viewed"
-      ```
-
-###  web/creatives/:creativeId/donation/closed
-  - **[POST]**
-    - Notifies Causemo user was donation screen was closed
-    - Header fields
-      - `api-version: 1`
-      - `Authorization: Bearer <AUTH_TOKEN>`
-    - Body
-      - `sessionId`: The current session `sessionId`
-    - Params
-      - _none_ 
-    - Response
-      - A JSON object with `sessionId` and `creativeId`.
-    - Try it:
-      - Replace `<AUTH_TOKEN>` with authenticated token provided
-      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `web/creatives`
-      ```
-      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>"}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/donation/closed"
       ```
 
 ###  web/creatives/:creativeId/donation/declined
