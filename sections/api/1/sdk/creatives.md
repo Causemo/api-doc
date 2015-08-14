@@ -258,4 +258,27 @@
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "udid": "<UDID>", "email":"miguel@causemo.com", "amount": "5.25"}' "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/pledge"
       ```
+  
+###  sdk/creatives/:creativeId/share
+  - **[GET]**
+    - Fetches a creative share token
+    - Header fields
+      - `api-version: 1`
+      - `client-version: <SDK_VERSION>`
+      - `Authorization: Bearer <AUTH_TOKEN>`
+    - Body
+      - _none_ 
+    - Params
+      - `sessionId`: The current session `sessionId`
+      - `udid`: The device `udid` used to initialize session with
+    - Response
+      - A JSON object with `sessionId`, `creativeId`, `token`.
+    - Try it:
+      - Replace `<AUTH_TOKEN>` with authenticated token provided
+      - Replace `<SESSION_ID>` with `sessionId` from [session initilization call](https://github.com/Causemo/api-doc/blob/master/sections/api/1/sdk/devices.md#sdkdevices)
+      - Replace `<UDID>` with device `udid`
+      - Replace `<CREATIVE_ID>` with a `creative.id` from a call to `sdk/creatives`
+      ```
+      curl -X GET -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" "http://dev-api.causemo.com/sdk/creatives/<CREATIVE_ID>/share?sessionId=<SESSION_ID>&udid=<UDID>"
+      ```
 
