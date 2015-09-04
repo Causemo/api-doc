@@ -247,6 +247,7 @@
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "email":"miguel@causemo.com", "amount": "5.25", "user": {"firstName":"miguel", "lastName":"Doe"}}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/pledge"
       ```
+      
 ###  web/creatives/:creativeId/pledge-direct
   - **[POST]**
     - Notifies Causemo user made a pledge. This endpoint will create a session and only associate this event to it
