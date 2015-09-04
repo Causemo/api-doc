@@ -247,4 +247,29 @@
       ```
       curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Bearer <AUTH_TOKEN>" -d '{"sessionId": "<SESSION_ID>", "email":"miguel@causemo.com", "amount": "5.25", "user": {"firstName":"miguel", "lastName":"Doe"}}' "http://dev-api.causemo.com/web/creatives/<CREATIVE_ID>/pledge"
       ```
-
+      
+[POST] web/creatives/:creativeId/pledge-direct
+    - Notifies Causemo user made a pledge. This endpoint will create a session and only associate this event to it
+    - Header fields
+      - `api-version: 1`
+      - `Authorization: Bearer <PUBLIC_PRIVATE_KEY>`
+    - Body
+      - `email`: The user email for pledge
+      - `amount`: The amount the user pledged (0 or greater).
+      - `device`: JSON object representing a device associated with this request 
+          - `vendor`: The device vendor (ie: `Apple`) 
+          - `model`: The device model (ie: `iPhone`) 
+          - `osName`: The OS name (ie: `iOS`) 
+          - `osVersion`: The OS version (ie: `8.0`) 
+          - `type`: The type of device (ie: `mobile` vs `desktop`, `tablet`) 
+      - `user`: (optional) JSON object representing a user associated with this request 
+    - Params
+      - _none_ 
+    - Response
+      - A JSON object with `sessionId` and `creativeId`.
+    - Try it:
+      - Replace `<PUBLIC_PRIVATE_KEY>` with base64 encoded public and private key in this format `publicKey:privateKey`. Note the `:` seperating the public and private key.
+      - Replace `<CREATIVE_ID>` with a valid creative id
+      ```
+      curl -X POST -H "Content-Type: application/json" -H "api-version: 1" -H "Authorization: Basic <PUBLIC_PRIVATE_KEY>" -d '{"email":"miguel@causemo.com", "amount": "5.25", "user": {"firstName":"miguel", "lastName":"Doe"}, "device": {"vendor":"Apple", "model":"iPhone", "osName": "iOS", "osVersion": "8.0", "type":"mobile"}}' "https://qa-api.causemo.com/web/creatives/<CREATIVE_ID>/pledge-direct"
+      
